@@ -21,8 +21,6 @@ public class Library {
      * @return - True if the book was removed, false if it was not found.
      */
     public boolean removeBook(String title) {
-        final Iterator<Book> iterator = books.iterator();
-
         for (Book book : books) {
             if (book.getTitle().equalsIgnoreCase(title)) {
                 books.remove(book);
