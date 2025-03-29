@@ -6,6 +6,12 @@ A basic library management system that allows you to add, remove, search, checko
 - Checkout and return books.
 
 # How to Run
-- Compile and run the project.
-- Run the `LibraryManagementSystem` class.
-- Follow the prompts to interact with the program.
+1. Compile the project.
+2. If using a .jar file, run the `LibraryManagementSystem.jar` file with the command:
+
+```bash
+java -jar LibraryManagementSystem.jar
+```
+
+3. Alternatively, if running directly from your code editor, execute the `LibraryManagementSystem` class.
+4. Follow the prompts to interact with the program.
