@@ -1,6 +1,7 @@
 package quest.gekko.assignment;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Library {
     private final ArrayList<Book> books = new ArrayList<>();
@@ -20,6 +21,8 @@ public class Library {
      * @return - True if the book was removed, false if it was not found.
      */
     public boolean removeBook(String title) {
+        final Iterator<Book> iterator = books.iterator();
+
         for (Book book : books) {
             if (book.getTitle().equalsIgnoreCase(title)) {
                 books.remove(book);
@@ -49,9 +52,7 @@ public class Library {
      */
     public void checkoutBook(String title) {
         final Book book = searchBook(title);
-        if (book != null && book.isAvailable()) {
-            book.checkout();
-        }
+        book.checkout();
     }
 
     /**
@@ -60,9 +61,7 @@ public class Library {
      */
     public void returnBook(String title) {
         final Book book = searchBook(title);
-        if (book != null && !book.isAvailable()) {
-            book.returnBook();
-        }
+        book.returnBook();
     }
 
     /**
